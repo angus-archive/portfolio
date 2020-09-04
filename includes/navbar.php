@@ -48,7 +48,7 @@ function isCurrentSR($pageName){
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <!--Home-->
-      <a class="navbar-item">
+      <a class="navbar-item" href="/">
         Home
       </a>
       <!--Pages-->
@@ -58,13 +58,13 @@ function isCurrentSR($pageName){
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Example link 1
-          </a>
-          <a class="navbar-item">
-            Example link 2
+          <a class="navbar-item" href="/projects">
+            All projects
           </a>
           <hr class="navbar-divider">
+          <a class="navbar-item">
+            Example link 2
+          </a> 
           <a class="navbar-item">
             Example link 3
           </a>
@@ -85,8 +85,9 @@ function isCurrentSR($pageName){
             <span class="icon"><i class="fab fa-github"></i></span>
             <span>GitHub</span>
           </a>
-          <a class="button is-light" href="#">
-            <span>Login</span>
+          <a class="button is-info" target="_blank" href="https://www.linkedin.com/in/angus-goody">
+            <span class="icon"><i class="fab fa-linkedin"></i></span>
+            <span>Linkedin</span>
           </a>
         </div>
       </div>
