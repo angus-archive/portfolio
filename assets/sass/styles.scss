@@ -48,3 +48,13 @@ body {
 #wrapper {
    flex: 1;
 }
+
+.equal-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.equal-height .card-content {
+  flex: auto;
+}
