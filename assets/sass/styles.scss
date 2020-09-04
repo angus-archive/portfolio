@@ -1,0 +1,50 @@
+// Set your brand colors
+$primary: #56CF00;
+$link: #409BF7;
+$info: #768DF7;
+$warning: #EFA821;
+$danger: #F76486;
+$success: #18BF3F;
+/*
+####################################################
+B U L M A
+####################################################
+*/
+@import "../../node_modules/bulma/bulma.sass";
+
+/*
+####################################################
+U T I L I T Y
+####################################################
+*/
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m-auto{
+  margin: auto;
+}
+
+.my-auto{
+  margin-top:auto;
+  margin-bottom: auto;
+}
+
+/*
+####################################################
+C U S T O M
+####################################################
+*/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
+}
+ 
+#wrapper {
+   flex: 1;
+}
