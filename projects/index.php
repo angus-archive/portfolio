@@ -27,7 +27,7 @@ include_once include_local_file("/includes/a_config.php");
     </div>
   </section>
   <!-- Content -->
-  <div id="wrapper">
+  <div id="wrapper" style="background-color: #1E2C2A;">
     <div class="container section">
       <!--Columns-->
       <div class="columns is-multiline">
