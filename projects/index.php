@@ -70,7 +70,7 @@ $all_projects=get_all_projects($pdo);
         <? foreach ($all_projects as $project): ?>
         <!--Card-->
         <div class="column is-12-mobile is-6-tablet is-3-fullhd is-4-desktop">
-          <div class="card equal-height">
+          <div class="box equal-height">
             <div class="card-image">
               <figure class="image">
                 <img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Project Image">
@@ -92,8 +92,8 @@ $all_projects=get_all_projects($pdo);
                 </div>
 
                 <div class="content mt-3">
-                  <?=$project["desc_s"]?>
-                  <div class="tags mt-5 has-text-centered">
+                  <!--Tags-->
+                  <div class="tags mb-5 has-text-centered">
                     <?
                     //Get tags for project
                     $project_tags=get_tags_for_project($pdo,$project["PID"]);
@@ -103,24 +103,22 @@ $all_projects=get_all_projects($pdo);
                     <span style="background-color: <?=$tag["background"]?>; color: <?=$tag["foreground"]?>" class="tag"><?=$tag["name"]?></span>
                     <? endforeach; ?>
                   </div>
+                  <!--Description-->
+                  <?=$project["desc_s"]?>
 
                 </div>
             </div>
             <!--Footer for card-->
-            <footer class="card-footer"> 
+            <div class="level is-mobile">
               <? if($project["is_web"] == 1):?>
-              <p class="card-footer-item">
-                <span>
-                  <a href="#">Live demo</a>
-                </span>
-              </p>
+              <div class="level-item">
+                <a class="button is-fullwidth is-primary is-outlined" href="#">Live demo</a>
+              </div>
               <? endif; ?>
-              <p class="card-footer-item">
-                <span>
-                  <a href="#">Github</a>
-                </span>
-              </p>
-              </footer>
+              <div class="level-item">
+                <a class="button is-fullwidth is-link is-outlined" href="#">Github</a>
+              </div>
+            </div>
           </div>
         </div>
         <? endforeach; ?>
