@@ -31,34 +31,36 @@ $all_projects=get_all_projects($pdo);
         </h2>
         <br>
         <!--Filter bar-->
-        <div class="tabs is-centered is-toggle">
+        <div id="filter_tabs" class="tabs is-centered is-toggle">
           <ul>
             <li class="is-active">
-              <a>
+              <a cat="all" class="active">
                 <span class="icon is-small"><i class="fas fa-th-large"></i></span>
                 <span>All</span>
               </a>
             </li>
             <li>
-              <a>
+              <a cat="<?=get_cat_id_by_name($pdo,"web");?>" class="active" >
                 <span class="icon is-small"><i class="fab fa-chrome"></i></span>
                 <span>Web</span>
               </a>
             </li>
             <li>
-              <a>
+              <a cat="<?=get_cat_id_by_name($pdo,"desktop");?>" class="active">
                 <span class="icon is-small"><i class="fas fa-desktop"></i></span>
                 <span>Desktop</span>
               </a>
             </li>
             <li>
-              <a>
+              <a cat="<?=get_cat_id_by_name($pdo,"mobile");?>" class="active">
                 <span class="icon is-small"><i class="fas fa-mobile-alt"></i></span>
                 <span>Mobile</span>
               </a>
             </li>
           </ul>
         </div>
+        <!--Progress bar-->
+        <progress id="loading" style="display: none" class="progress is-small is-primary" max="100">15%</progress>
       </div>
     </div>
   </section>
@@ -69,7 +71,7 @@ $all_projects=get_all_projects($pdo);
       <div class="columns is-multiline is-mobile">
         <? foreach ($all_projects as $project): ?>
         <!--Card-->
-        <div class="column is-12-mobile is-6-tablet is-3-fullhd is-4-desktop">
+        <div class="project-col column is-12-mobile is-6-tablet is-3-fullhd is-4-desktop" cat=<?=get_project_category($pdo,$project["PID"])["CID"]?>>
           <div class="box equal-height">
             <div class="card-image">
               <figure class="image">
@@ -127,5 +129,39 @@ $all_projects=get_all_projects($pdo);
   </div>
   <!-- Footer -->
   <? include_once include_local_file("/includes/footer.php");?>
+  <!--Custom script -->
+  <script type="text/javascript">
+    //On load
+    $( document ).ready(function() {
+
+
+      //Filter tab clicked
+      $("#filter_tabs a").click(function(){
+        this_link=$(this);
+        //Prevent double click
+        if(!this_link.parent().hasClass("is-active")){
+          //Remove active from all
+          $(".tabs li").removeClass("is-active");
+          //Set this link as active
+          this_link.parent().addClass("is-active");
+          //Get CID
+          cat_id=this_link.attr("cat");
+          //Now Hide all the cards
+          $(".project-col").hide(100);
+          if(cat_id !== "all"){
+            //Unhide the cards that match
+            $('.project-col[cat='+cat_id+']').show(200);
+          }else{
+           $(".project-col").show(200); 
+          }
+        }
+        
+      });
+    });
+
+
+
+
+  </script>
 </body>
 </html>
