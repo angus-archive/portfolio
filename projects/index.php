@@ -3,6 +3,12 @@
 include_once dirname($_SERVER["DOCUMENT_ROOT"])."/core/global-functions.php";
 //Import config file
 include_once include_local_file("/includes/a_config.php");
+//Load the database
+include_once include_private_file("/core/public-functions/setup/connect-to-public-database.php");
+//Import Public Functions
+include_once include_private_file("/core/public-functions/public-functions.php");
+
+$all_projects=get_all_projects($pdo);
 ?>
 <!DOCTYPE html>
 <html lang="en" class="">
@@ -24,6 +30,7 @@ include_once include_local_file("/includes/a_config.php");
           View my Projects
         </h2>
         <br>
+        <!--Filter bar-->
         <div class="tabs is-centered is-toggle">
           <ul>
             <li class="is-active">
@@ -59,14 +66,14 @@ include_once include_local_file("/includes/a_config.php");
   <div id="wrapper" style="background-color: #1E2C2A;">
     <div class="container section">    
       <!--Columns-->
-      <div class="columns is-multiline">
-        <? for ($i=0; $i < 10; $i++): ?>
+      <div class="columns is-multiline is-mobile">
+        <? foreach ($all_projects as $project): ?>
         <!--Card-->
-        <div class="column is-4 is-3-fullhd">
-          <div class="card">
+        <div class="column is-12-mobile is-6-tablet is-3-fullhd is-4-desktop">
+          <div class="card equal-height">
             <div class="card-image">
               <figure class="image">
-                <img src="/assets/images/project-images/default_image.svg" alt="Placeholder image">
+                <img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Project Image">
               </figure>
             </div>
             <!--Content-->
@@ -75,41 +82,48 @@ include_once include_local_file("/includes/a_config.php");
                   <!--Project Logo-->
                   <div class="media-left">
                     <figure class="image is-48x48">
-                      <img src="/assets/images/project-images/default_logo.svg" alt="Placeholder image">
+                      <img src="/assets/images/project-images/<?=$project["logo_slug"]?>" alt="Project Logo">
                     </figure>
                   </div>
                   <div class="media-content">
-                    <p class="title is-4">Project Name</p>
-                    <p class="subtitle is-6">12/45/2022</p>
+                    <p class="title is-4"><?=$project["name"]?></p>
+                    <p class="subtitle is-6"><?=$project["month_created"]?></p>
                   </div>
                 </div>
 
                 <div class="content mt-3">
-                  Brief description of the project goes here
+                  <?=$project["desc_s"]?>
                   <div class="tags mt-5 has-text-centered">
-                    <span class="tag">One</span>
-                    <span class="tag">Two</span>
-                    <span class="tag">Three</span>
+                    <?
+                    //Get tags for project
+                    $project_tags=get_tags_for_project($pdo,$project["PID"]);
+                    //Loop through each tag
+                    ?>
+                    <? foreach ($project_tags as $tag): ?>
+                    <span style="background-color: <?=$tag["background"]?>; color: <?=$tag["foreground"]?>" class="tag"><?=$tag["name"]?></span>
+                    <? endforeach; ?>
                   </div>
 
                 </div>
             </div>
             <!--Footer for card-->
-            <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    <a href="#">Live demo</a>
-                  </span>
-                </p>
-                <p class="card-footer-item">
-                  <span>
-                    <a href="#">Github</a>
-                  </span>
-                </p>
+            <footer class="card-footer"> 
+              <? if($project["is_web"] == 1):?>
+              <p class="card-footer-item">
+                <span>
+                  <a href="#">Live demo</a>
+                </span>
+              </p>
+              <? endif; ?>
+              <p class="card-footer-item">
+                <span>
+                  <a href="#">Github</a>
+                </span>
+              </p>
               </footer>
           </div>
         </div>
-        <? endfor; ?>
+        <? endforeach; ?>
       </div>
     </div>
   </div>
