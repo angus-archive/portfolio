@@ -9,10 +9,10 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT']."/includes/footer-scripts.php");?>
 <!--Custom-Scripts -->
 <script src="/assets/scripts/global.js"></script>
-<footer class="footer">
+<footer class="footer" style="background-color: #233332">
 	<div class="container">
 	  <div class="content has-text-centered">
-	    <p>&copy 2020 Angus Goody</p>
+	    <p class="has-text-light">&copy 2020 Angus Goody</p>
 	  </div>
 	</div>
 </footer>

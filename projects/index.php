@@ -82,7 +82,7 @@ $all_projects=get_all_projects($pdo);
           <div class="box equal-height">
             <div class="card-image">
               <figure class="image">
-                <img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Project Image">
+                <a href="/projects/view?id=<?=$project["PID"]?>"><img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Project Image"></a>
               </figure>
             </div>
             <!--Content-->
@@ -99,34 +99,24 @@ $all_projects=get_all_projects($pdo);
                     <p class="subtitle is-6"><?=$project["month_created"]?></p>
                   </div>
                 </div>
-
-                <div class="content mt-3">
-                  <!--Tags-->
-                  <div class="tags mb-5 has-text-centered">
-                    <?
-                    //Get tags for project
-                    $project_tags=get_tags_for_project($pdo,$project["PID"]);
-                    //Loop through each tag
-                    ?>
-                    <? foreach ($project_tags as $tag): ?>
-                    <span style="background-color: <?=$tag["background"]?>; color: <?=$tag["foreground"]?>" class="tag"><?=$tag["name"]?></span>
-                    <? endforeach; ?>
-                  </div>
+                <hr>
+                <div class="content mt-3">  
                   <!--Description-->
                   <?=$project["desc_s"]?>
-
                 </div>
             </div>
             <!--Footer for card-->
             <div class="level is-mobile">
-              <? if($project["is_web"] == 1):?>
+              <? if($project["is_live"] == 1):?>
               <div class="level-item">
-                <a class="button is-fullwidth is-primary is-outlined" href="#">Live demo</a>
+                <a class="button is-fullwidth is-primary is-outlined" target="_blank" href="<?=$project["live_link"]?>">Live</a>
               </div>
               <? endif; ?>
+              <? if($project["is_git"] == 1):?>
               <div class="level-item">
-                <a class="button is-fullwidth is-link is-outlined" href="#">Github</a>
+                <a class="button is-fullwidth is-link is-outlined" target="_blank" href="<?=$project["git_link"]?>">Github</a>
               </div>
+              <? endif; ?>
             </div>
           </div>
         </div>
