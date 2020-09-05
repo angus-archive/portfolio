@@ -69,6 +69,13 @@ $all_projects=get_all_projects($pdo);
     <div class="container section">    
       <!--Columns-->
       <div class="columns is-multiline is-mobile">
+        <!--No results-->
+        <div class="column is-12" id="not_found" style="display: none">
+          <article class="notification is-link is-light">
+            <p class="title">No Projects Found</p>
+            <p class="subtitle">No projects could be found for this category</p>
+          </article>
+        </div>
         <? foreach ($all_projects as $project): ?>
         <!--Card-->
         <div class="project-col column is-12-mobile is-6-tablet is-3-fullhd is-4-desktop" cat=<?=get_project_category($pdo,$project["PID"])["CID"]?>>
@@ -148,11 +155,21 @@ $all_projects=get_all_projects($pdo);
           cat_id=this_link.attr("cat");
           //Now Hide all the cards
           $(".project-col").hide(100);
+          number_of_projects=0;
           if(cat_id !== "all"){
             //Unhide the cards that match
-            $('.project-col[cat='+cat_id+']').show(200);
+            query=$('.project-col[cat='+cat_id+']');
+            query.show(200);
           }else{
-           $(".project-col").show(200); 
+            query=$(".project-col");
+            query.show(200); 
+          }
+          //Get number of projects
+          number_of_projects=query.length;
+          if (number_of_projects < 1){
+            $("#not_found").show(200);
+          }else{
+            $("#not_found").hide();
           }
         }
         
