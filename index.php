@@ -14,7 +14,7 @@ include_once include_local_file("/includes/a_config.php");
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
   <!-- Content -->
-  <div id="wrapper" style="background-color: #1E2C2A;">
+  <div id="wrapper" class="dracula">
     <div class="container section">
       <div class="has-text-centered mb-5">
         <!--Signiture-->

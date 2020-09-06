@@ -5,6 +5,11 @@ $info: #768DF7;
 $warning: #EFA821;
 $danger: #F76486;
 $success: #18BF3F;
+
+//Custom colours
+$dracula: #1E2C2A;
+$dracula_light: #233332;
+
 /*
 ####################################################
 B U L M A
@@ -57,4 +62,12 @@ body {
 
 .equal-height .card-content {
   flex: auto;
+}
+
+.dracula{
+  background-color: $dracula;
+}
+
+.dracula_light{
+  background-color: $dracula_light;
 }

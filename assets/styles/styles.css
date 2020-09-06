@@ -9887,4 +9887,12 @@ body {
   flex: auto;
 }
 
+.dracula {
+  background-color: #1E2C2A;
+}
+
+.dracula_light {
+  background-color: #233332;
+}
+
 /*# sourceMappingURL=styles.css.map */

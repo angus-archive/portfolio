@@ -28,7 +28,7 @@ $all_projects=get_all_projects($pdo);
   <!-- Head tags -->
   <? include_once include_local_file("/includes/head-tags.php");?>
 </head>
-<body style="background-color: #1E2C2A;">
+<body class="dracula">
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
   <!-- Content -->
@@ -84,7 +84,7 @@ $all_projects=get_all_projects($pdo);
                   <div class="column is-6">
                     <? if($project["is_live"] == 1):?>
                     <div class="level-item">
-                      <a class="button is-fullwidth is-primary is-outlined" target="_blank" href="<?=$project["live_link"]?>">Live</a>
+                      <a class="button is-fullwidth is-primary is-outlined" target="_blank" href="<?=$project["live_link"]?>">Visit</a>
                     </div>
                     <? endif; ?>
                     <? if($project["is_git"] == 1):?>

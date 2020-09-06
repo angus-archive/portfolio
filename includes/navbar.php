@@ -51,32 +51,16 @@ function isCurrentSR($pageName){
       <a class="navbar-item" href="/">
         Home
       </a>
-      <!--Pages-->
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Projects
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="/projects">
-            All projects
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Example link 2
-          </a> 
-          <a class="navbar-item">
-            Example link 3
-          </a>
-        </div>
-      </div>
-      <!--ABout page-->
+      <!--Projects-->
+      <a class="navbar-item" href="/projects">
+        Projects
+      </a>
+      <!--Contact page-->
       <a class="navbar-item">
         Contact
       </a>
 
     </div>
-
 
     <div class="navbar-end">
       <div class="navbar-item">
