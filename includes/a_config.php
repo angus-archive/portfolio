@@ -51,11 +51,24 @@ switch ($first_parent) {
 		break;
 
 	//About Page
-	case '/about.php':
-		$NAV_PAGE="about";
-		$CURRENT_PAGE="about";
-		$PAGE_TITLE="About | Angus Goody";
-		$PAGE_DESCRIPTION="Find out about Angus Goody";
+	case '/contact.php':
+		$NAV_PAGE="contact";
+		$CURRENT_PAGE="contact";
+		$PAGE_TITLE="Contact | Angus Goody";
+		$PAGE_DESCRIPTION="Contact Angus Goody";
+		break;
+
+	//Projects Section
+	case '/projects':
+		$NAV_PAGE="projects";
+		$CURRENT_PAGE="products";
+		$PAGE_TITLE="Projects | Angus Goody";
+		$PAGE_DESCRIPTION="View my Projects at Angus Goody";
+		//A seperate switch for the subpages of this folder
+		switch ($file_base) {
+			case 'product.php':
+				$CURRENT_PAGE="projects/view";
+		}
 		break;
 
 	//If undefined

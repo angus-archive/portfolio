@@ -20,20 +20,45 @@ if(isset($_GET["id"])){
   //header("location: /projects");
   echo "nope";
 }
-$all_projects=get_all_projects($pdo);
 ?>
 <!DOCTYPE html>
 <html lang="en" class="">
 <head>
   <!-- Head tags -->
-  <? include_once include_local_file("/includes/head-tags.php");?>
+  <? include_once include_local_file("/includes/static-tags.php");?>
+  <? if($validProject == 1): ?>
+  <title><?=$project['name']?> | Angus Goody</title>
+  <meta name="description" content="View <?=$project['name']?> at Angus Goody's Website">
+  <? else: ?>
+  <title> Project Unavailable | Angus Goody</title>
+  <meta name="description" content="This project could not be found - Angus Goody">
+  <? endif; ?>
 </head>
 <body class="dracula">
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
+  <? if(!$validProject == 1): ?>
+  <!-- Top Section -->
+  <section class="hero is-warning">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">
+          Oops :/
+        </h1>
+      </div>
+    </div>
+  </section>
+  <? endif; ?>
   <!-- Content -->
   <div id="wrapper">
-    <div class="container section">  
+    <div class="container section">
+      <? if(!$validProject == 1): ?>
+      <div class="has-text-centered">
+        <h3 class="title is-3 has-text-white">Project Not Found</h3>
+        <h2 class="subtitle is-6 has-text-white">The project you were looking for no longer exists</h2>
+        <a href="/projects" class="button is-rounded is-primary">All Projects</a>
+      </div>
+      <? else: ?>
       <!--White box-->  
       <div class="box">
         <!--Back button-->
@@ -113,6 +138,7 @@ $all_projects=get_all_projects($pdo);
           </div>
         </div>
       </div>
+      <? endif; ?>
     </div>
   </div>
   <!-- Footer -->

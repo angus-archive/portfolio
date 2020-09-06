@@ -30,9 +30,9 @@ include_once include_local_file("/includes/a_config.php");
       <br>
       <div class="section box mt-5">
         <div class="container is-narrow">
-          <div class="columns is-gapless">
+          <div class="columns is-gapless is-mobile is-multiline">
             <!--Back End-->
-            <div class="column is-4">
+            <div class="column">
               <figure class="image is-128x128 mx-auto">
                 <img src="/assets/images/icons/code.svg">
               </figure>
@@ -54,7 +54,7 @@ include_once include_local_file("/includes/a_config.php");
               </div>
             </div>
             <!--Front End-->
-            <div class="column is-4">
+            <div class="column">
               <figure class="image is-128x128 mx-auto">
                 <img src="/assets/images/icons/monitor.svg">
               </figure>
@@ -78,7 +78,7 @@ include_once include_local_file("/includes/a_config.php");
               </div>
             </div>
             <!--Designer-->
-            <div class="column is-4">
+            <div class="column">
               <figure class="image is-128x128 mx-auto">
                 <img src="/assets/images/icons/design.svg">
               </figure>
