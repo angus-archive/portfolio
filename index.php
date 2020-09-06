@@ -48,14 +48,16 @@ include_once include_private_file("/core/public-functions/public-functions.php")
               <hr>
               <!--Skills-->
               <div class="skills py-4">
-                <table class="table is-fullwidth is-striped has-text-centered">
-                  <tbody>
-                    <tr><td><strong>PHP</strong></td></tr>
-                    <tr><td><strong>Python</strong></td></tr>
-                    <tr><td><strong>Ruby</strong></td></tr>
-                    <tr><td><strong>Java</strong></td></tr>
-                  </tbody>
-                </table>
+                <div class="columns is-centered is-multiline">
+                  <?
+                  //Get tags
+                  $all_tags=array("PHP","Python","Java","Ruby");
+                  foreach ($all_tags as $tag): ?>
+                  <div class="column is-7">
+                    <p class="notification is-primary has-text-centered"><?=$tag?></p>
+                  </div>
+                  <? endforeach; ?>
+                </div>
               </div>
             </div>
             <!--Front End-->
@@ -70,16 +72,16 @@ include_once include_private_file("/core/public-functions/public-functions.php")
               <hr>
               <!--Skills-->
               <div class="skills py-4">
-                <table class="table is-fullwidth is-striped has-text-centered">
-                  <tbody>
-                    <tr><td><strong>HTML</strong></td></tr>
-                    <tr><td><strong>CSS</strong></td></tr>
-                    <tr><td><strong>Javascript</strong></td></tr>
-                    <tr><td><strong>Jquery</strong></td></tr>
-                    <tr><td><strong>Bootstrap</strong></td></tr>
-                    <tr><td><strong>Bulma</strong></td></tr>
-                  </tbody>
-                </table>
+                <div class="columns is-centered is-multiline">
+                  <?
+                  //Get tags
+                  $all_tags=array("HTML","CSS","Javascript","jQuery","Bootstrap","Bulma");
+                  foreach ($all_tags as $tag): ?>
+                  <div class="column is-7">
+                    <p class="notification is-info has-text-centered"><?=$tag?></p>
+                  </div>
+                  <? endforeach; ?>
+                </div>
               </div>
             </div>
             <!--Designer-->
@@ -94,17 +96,21 @@ include_once include_private_file("/core/public-functions/public-functions.php")
               <hr>
               <!--Skills-->
               <div class="skills py-4">
-                <table class="table is-fullwidth is-striped has-text-centered">
-                  <tbody>
-                    <tr><td><strong>Affinity</strong></td></tr>
-                    <tr><td><strong>Sketch</strong></td></tr>
-                  </tbody>
-                </table>
+                <div class="columns is-centered is-multiline">
+                  <?
+                  //Get tags
+                  $all_tags=array("Affinity","Sketch");
+                  foreach ($all_tags as $tag): ?>
+                  <div class="column is-7">
+                    <p class="notification is-link has-text-centered"><?=$tag?></p>
+                  </div>
+                  <? endforeach; ?>
+                </div>
               </div>
             </div>
           </div>
           <!--How made-->
-          <br>
+          <hr>
           <div class="has-text-centered">
             <h3 class="title is-3">This Website Uses...</h3>
           </div>
@@ -113,8 +119,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <?
             //Get tags
             $all_tags=get_tags_by_name_list($pdo,array("Bulma","PHP","CSS","HTML","jQuery"));
-            ?>
-            <? foreach ($all_tags as $tag): ?>
+            foreach ($all_tags as $tag): ?>
             <div class="column">
               <p style="background-color: <?=$tag["background"]?>;color: <?=$tag["foreground"]?>" class="notification has-text-centered"><strong><?=$tag["name"]?></strong></p>
             </div>
