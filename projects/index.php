@@ -86,7 +86,7 @@ $all_projects=get_all_projects($pdo);
               </figure>
             </div>
             <!--Content-->
-            <div class="card-content">
+            <div class="card-content py-5 px-0">
                 <div class="media">
                   <!--Project Logo-->
                   <div class="media-left">
@@ -95,7 +95,7 @@ $all_projects=get_all_projects($pdo);
                     </figure>
                   </div>
                   <div class="media-content">
-                    <p class="title is-4"><?=$project["name"]?></p>
+                    <a href="/projects/view?id=<?=$project["PID"]?>"><p class="title is-4"><?=$project["name"]?></p></a>
                     <p class="subtitle is-6"><?=$project["month_created"]?></p>
                   </div>
                 </div>

@@ -34,8 +34,11 @@ $all_projects=get_all_projects($pdo);
   <!-- Content -->
   <div id="wrapper">
     <div class="container section">  
+
       <!--White box-->  
       <div class="box">
+        <!--Back button-->
+        <a href="/projects" class="button is-primary is-inverted mb-4"><span class="icon"><i class="fas fa-chevron-left"></i></span><span>Projects</span></a>
         <!--Basic details-->
         <div class="columns">
           <!--Left Side -->
