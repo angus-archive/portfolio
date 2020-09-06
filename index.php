@@ -3,6 +3,10 @@
 include_once dirname($_SERVER["DOCUMENT_ROOT"])."/core/global-functions.php";
 //Import config file
 include_once include_local_file("/includes/a_config.php");
+//Load the database
+include_once include_private_file("/core/public-functions/setup/connect-to-public-database.php");
+//Import Public Functions
+include_once include_private_file("/core/public-functions/public-functions.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" class="">
@@ -17,7 +21,7 @@ include_once include_local_file("/includes/a_config.php");
   <div id="wrapper" class="dracula">
     <div class="container section">
       <div class="has-text-centered mb-5">
-        <!--Signiture-->
+        <!--Written Logo-->
         <figure class="image mb-2">
           <img src="/assets/images/core/sign.svg"  style="max-width: 700px; margin: auto;">
         </figure>
@@ -25,11 +29,12 @@ include_once include_local_file("/includes/a_config.php");
           <h1 class="title is-1 has-text-grey-lighter">Computer Science Student</h1>
           <h3 class="subtitle has-text-grey-light">University of Sheffield</h3>
         </div>
-        <a href="/projects" class="button is-primary is-large mt-5">Projects</a>
+        <a style="width: 25%; min-width: 170px;" href="/projects" class="button is-primary is-large mt-5">Projects</a>
       </div>
       <br>
       <div class="section box mt-5">
         <div class="container is-narrow">
+          <!--Skills columns-->
           <div class="columns is-gapless is-mobile is-multiline">
             <!--Back End-->
             <div class="column">
@@ -97,6 +102,27 @@ include_once include_local_file("/includes/a_config.php");
                 </table>
               </div>
             </div>
+          </div>
+          <!--How made-->
+          <br>
+          <div class="has-text-centered">
+            <h3 class="title is-3">This Website Uses...</h3>
+          </div>
+          <!--View website tags-->
+          <div class="columns is-mobile is-multiline is-centered mt-5">
+            <?
+            //Get tags
+            $all_tags=get_tags_by_name_list($pdo,array("Bulma","PHP","CSS","HTML","jQuery"));
+            ?>
+            <? foreach ($all_tags as $tag): ?>
+            <div class="column">
+              <p style="background-color: <?=$tag["background"]?>;color: <?=$tag["foreground"]?>" class="notification has-text-centered"><strong><?=$tag["name"]?></strong></p>
+            </div>
+            <? endforeach;?>
+          </div>
+          <!--Find out more -->
+          <div class="has-text-centered">
+            <a class="button is-link is-light">Find out more about this website</a>
           </div>
         </div>
       </div>
