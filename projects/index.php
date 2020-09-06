@@ -16,21 +16,21 @@ $all_projects=get_all_projects($pdo);
   <!-- Head tags -->
   <? include_once include_local_file("/includes/head-tags.php");?>
 </head>
-<body>
+<body class="dracula">
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
-  <!--Title-->
-  <section class="hero is-light">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">
-          My Projects
-        </h1>
-        <h2 class="subtitle">
-          View my Projects
-        </h2>
-        <br>
-        <!--Filter bar-->
+  <!-- Content -->
+  <div id="wrapper">
+    <div class="container section">  
+      <!--Title-->
+      <div class="has-text-centered mb-5">
+        <!--Projects Sign-->
+        <figure class="image mb-2">
+          <img src="/assets/images/core/projects.svg"  style="max-width: 700px; margin: auto;">
+        </figure>
+      </div> 
+      <!--Filter Box-->
+      <div class="box">
         <div id="filter_tabs" class="tabs is-centered is-toggle">
           <ul>
             <li class="is-active">
@@ -59,14 +59,8 @@ $all_projects=get_all_projects($pdo);
             </li>
           </ul>
         </div>
-        <!--Progress bar-->
-        <progress id="loading" style="display: none" class="progress is-small is-primary" max="100">15%</progress>
       </div>
-    </div>
-  </section>
-  <!-- Content -->
-  <div id="wrapper" class="dracula">
-    <div class="container section">    
+
       <!--Columns-->
       <div class="columns is-multiline is-mobile">
         <!--No results-->

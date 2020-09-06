@@ -56,7 +56,7 @@ function isCurrentSR($pageName){
         Projects
       </a>
       <!--Contact page-->
-      <a class="navbar-item">
+      <a class="navbar-item" href="/contact">
         Contact
       </a>
 

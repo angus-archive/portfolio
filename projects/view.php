@@ -34,7 +34,6 @@ $all_projects=get_all_projects($pdo);
   <!-- Content -->
   <div id="wrapper">
     <div class="container section">  
-
       <!--White box-->  
       <div class="box">
         <!--Back button-->
