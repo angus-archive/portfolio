@@ -26,7 +26,7 @@ $all_projects=get_all_projects($pdo);
       <div class="has-text-centered mb-5">
         <!--Projects Sign-->
         <figure class="image mb-2">
-          <img src="/assets/images/core/projects.svg"  style="max-width: 700px; margin: auto;">
+          <img src="/assets/images/core/projects.svg"  style="max-width: 700px; margin: auto;" alt="Projects Title Handwritten">
         </figure>
       </div> 
       <!--Filter Box-->
@@ -76,7 +76,7 @@ $all_projects=get_all_projects($pdo);
           <div class="box equal-height">
             <div class="card-image">
               <figure class="image is-5by4">
-                <a href="/projects/view?id=<?=$project["PID"]?>"><img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Project Image"></a>
+                <a href="/projects/view?id=<?=$project["PID"]?>"><img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Project Image For <?=$project["name"]?>"></a>
               </figure>
             </div>
             <!--Content-->
@@ -85,7 +85,7 @@ $all_projects=get_all_projects($pdo);
                   <!--Project Logo-->
                   <div class="media-left">
                     <figure class="image is-48x48">
-                      <img src="/assets/images/project-images/<?=$project["logo_slug"]?>" alt="Project Logo">
+                      <img src="/assets/images/project-images/<?=$project["logo_slug"]?>" alt="Project Logo for <?=$project["name"]?>">
                     </figure>
                   </div>
                   <div class="media-content">

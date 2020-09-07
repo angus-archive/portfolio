@@ -70,7 +70,7 @@ if(isset($_GET["id"])){
             <!--Image -->
             <div class="has-background-grey-lighter">
               <figure class="image">
-                <img src="/assets/images/project-images/<?=$project["image_slug"]?>">
+                <img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Product Image For <?=$project["name"]?>">
               </figure>
             </div>
           </div>
@@ -133,7 +133,7 @@ if(isset($_GET["id"])){
           </div>
           <div class="level-right">
             <figure class="image is-48x48">
-              <img src="/assets/images/project-images/<?=$project["logo_slug"]?>" alt="Project Logo">
+              <img src="/assets/images/project-images/<?=$project["logo_slug"]?>" alt="Project Logo for <?=$project["name"]?>">
             </figure>
           </div>
         </div>

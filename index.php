@@ -23,7 +23,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
       <div class="has-text-centered mb-5">
         <!--Written Logo-->
         <figure class="image mb-2">
-          <img src="/assets/images/core/sign.svg"  style="max-width: 700px; margin: auto;">
+          <img src="/assets/images/core/sign.svg"  style="max-width: 700px; margin: auto;" alt="Angus' Signiture">
         </figure>
         <div class="has-text-light my-5">
           <h1 class="title is-1 has-text-grey-lighter">Computer Science Student</h1>
@@ -41,7 +41,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <!--Back End-->
             <div class="column mt-2">
               <figure class="image is-128x128 mx-auto">
-                <img src="/assets/images/icons/code.svg">
+                <img src="/assets/images/icons/code.svg" alt="Coding Icon">
               </figure>
               <!--Title-->
               <div class="has-text-centered mt-5">
@@ -65,7 +65,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <!--Front End-->
             <div class="column mt-2">
               <figure class="image is-128x128 mx-auto">
-                <img src="/assets/images/icons/monitor.svg">
+                <img src="/assets/images/icons/monitor.svg" alt="Monitor Icon">
               </figure>
               <!--Title-->
               <div class="has-text-centered mt-5">
@@ -89,7 +89,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <!--Designer-->
             <div class="column mt-2">
               <figure class="image is-128x128 mx-auto">
-                <img src="/assets/images/icons/design.svg">
+                <img src="/assets/images/icons/design.svg" alt="Design Icon">
               </figure>
               <!--Title-->
               <div class="has-text-centered mt-5">
@@ -139,7 +139,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <h3 class="title is-3 mb-0">Downloads...</h3>
             <div class="columns is-mobile is-centered mt-4">
               <div class="column is-8-mobile is-6-tablet is-3-desktop">
-                <img src="/assets/images/meat/resume.svg">
+                <img src="/assets/images/meat/resume.svg" alt="Angus Goody Resume">
                 <a class="button is-link is-outlined mt-3">Download Resume</a>
               </div>
             </div>

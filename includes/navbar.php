@@ -49,15 +49,15 @@ function isCurrentSR($pageName){
     <div class="navbar-start">
       <!--Home-->
       <a class="navbar-item" href="/">
-        Home
+        Home <?isCurrentSR("index")?>
       </a>
       <!--Projects-->
       <a class="navbar-item" href="/projects">
-        Projects
+        Projects <?isCurrentSR("projects")?>
       </a>
       <!--Contact page-->
       <a class="navbar-item" href="/contact">
-        Contact
+        Contact <?isCurrentSR("contact")?>
       </a>
 
     </div>
