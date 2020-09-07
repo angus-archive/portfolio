@@ -39,13 +39,13 @@ include_once include_private_file("/core/public-functions/public-functions.php")
           <!--Skills columns-->
           <div class="columns is-gapless is-mobile is-multiline">
             <!--Back End-->
-            <div class="column">
+            <div class="column mt-2">
               <figure class="image is-128x128 mx-auto">
                 <img src="/assets/images/icons/code.svg">
               </figure>
               <!--Title-->
               <div class="has-text-centered mt-5">
-                <h3 class="title is-4 has-text-grey-dark">Back End Developer</h3>
+                <h3 class="title is-4 has-text-grey-dark">Back End</h3>
               </div>
               <hr>
               <!--Skills-->
@@ -56,20 +56,20 @@ include_once include_private_file("/core/public-functions/public-functions.php")
                   $all_tags=array("PHP","Python","Java","Ruby");
                   foreach ($all_tags as $tag): ?>
                   <div class="column is-7">
-                    <p class="notification is-primary has-text-centered"><?=$tag?></p>
+                    <p class="notification is-primary has-text-centered mx-1"><?=$tag?></p>
                   </div>
                   <? endforeach; ?>
                 </div>
               </div>
             </div>
             <!--Front End-->
-            <div class="column">
+            <div class="column mt-2">
               <figure class="image is-128x128 mx-auto">
                 <img src="/assets/images/icons/monitor.svg">
               </figure>
               <!--Title-->
               <div class="has-text-centered mt-5">
-                <h3 class="title is-4 has-text-grey-dark">Front End Developer</h3>
+                <h3 class="title is-4 has-text-grey-dark">Front End</h3>
               </div>
               <hr>
               <!--Skills-->
@@ -80,14 +80,14 @@ include_once include_private_file("/core/public-functions/public-functions.php")
                   $all_tags=array("HTML","CSS","Javascript","jQuery","Bootstrap","Bulma");
                   foreach ($all_tags as $tag): ?>
                   <div class="column is-7">
-                    <p class="notification is-info has-text-centered"><?=$tag?></p>
+                    <p class="notification is-info has-text-centered mx-1"><?=$tag?></p>
                   </div>
                   <? endforeach; ?>
                 </div>
               </div>
             </div>
             <!--Designer-->
-            <div class="column">
+            <div class="column mt-2">
               <figure class="image is-128x128 mx-auto">
                 <img src="/assets/images/icons/design.svg">
               </figure>
@@ -104,7 +104,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
                   $all_tags=array("Affinity","Sketch");
                   foreach ($all_tags as $tag): ?>
                   <div class="column is-7">
-                    <p class="notification is-link has-text-centered"><?=$tag?></p>
+                    <p class="notification is-link has-text-centered mx-1"><?=$tag?></p>
                   </div>
                   <? endforeach; ?>
                 </div>
@@ -131,11 +131,19 @@ include_once include_private_file("/core/public-functions/public-functions.php")
           </div>
           <!--Find out more -->
           <div class="has-text-centered">
-            <a class="button is-link is-light">Find out more about this website</a>
+            <a class="button is-link is-inverted">Find out more about this website</a>
           </div>
           <!--Downloads-->
           <hr>
-          
+          <div class="has-text-centered">
+            <h3 class="title is-3 mb-0">Downloads...</h3>
+            <div class="columns is-mobile is-centered mt-4">
+              <div class="column is-8-mobile is-6-tablet is-3-desktop">
+                <img src="/assets/images/meat/resume.svg">
+                <a class="button is-link is-outlined mt-3">Download Resume</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
