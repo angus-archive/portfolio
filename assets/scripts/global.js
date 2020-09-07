@@ -8,6 +8,18 @@
 
 $(document).ready(function() {
 
+  //Dismiss button for bulma notifications
+  $(".notification .delete").click(function(){
+    parent=$(this).parent();
+    parent.hide(250);
+  });
+
+  //Dismiss button for bulma messages
+  $(".message .delete").click(function(){
+    parent=$(this).parent().parent();
+    parent.hide(250);
+  });
+  
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(function() {
 

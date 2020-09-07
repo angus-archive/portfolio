@@ -10,7 +10,6 @@ include_once include_private_file("/core/email-functions.php");
 
 //Check for POST parameters
 if (isset($_POST["name"],$_POST["email"],$_POST["message"])){
-  echo "valid data";
   $name=$_POST["name"];
   $email=$_POST["email"];
   $message=$_POST["message"];
@@ -47,6 +46,12 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"])){
           <img src="/assets/images/core/contact.svg"  style="max-width: 700px; margin: auto;">
         </figure>
       </div>
+      <?if (isset($email_sent) && ($email_sent === true)): ?>
+      <div class="notification is-success">
+        <button class="delete"></button>
+        Your Email has been sent succesfully
+      </div>
+      <? endif; ?>
       <div class="columns">
         <div class="column is-5">
           <div class="box">
