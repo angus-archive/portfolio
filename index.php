@@ -114,23 +114,28 @@ include_once include_private_file("/core/public-functions/public-functions.php")
           <!--How made-->
           <hr>
           <div class="has-text-centered">
-            <h3 class="title is-3">This Website Uses...</h3>
+            <h3 class="title is-3 mb-0">This Website Uses...</h3>
           </div>
           <!--View website tags-->
-          <div class="columns is-mobile is-multiline is-centered mt-5">
-            <?
-            //Get tags
-            $all_tags=get_tags_by_name_list($pdo,array("Bulma","PHP","CSS","HTML","jQuery"));
-            foreach ($all_tags as $tag): ?>
-            <div class="column">
-              <p style="background-color: <?=$tag["background"]?>;color: <?=$tag["foreground"]?>" class="notification has-text-centered"><strong><?=$tag["name"]?></strong></p>
+          <div class="section">
+            <div class="columns is-vcentered is-mobile is-multiline is-centered">
+              <?
+              //Get tags
+              $all_tags=get_tags_by_name_list($pdo,array("Bulma","PHP","CSS","HTML","jQuery"));
+              foreach ($all_tags as $tag): ?>
+              <div class="column">
+                <p style="background-color: <?=$tag["background"]?>;color: <?=$tag["foreground"]?>" class="notification has-text-centered"><strong><?=$tag["name"]?></strong></p>
+              </div>
+              <? endforeach;?>
             </div>
-            <? endforeach;?>
           </div>
           <!--Find out more -->
           <div class="has-text-centered">
             <a class="button is-link is-light">Find out more about this website</a>
           </div>
+          <!--Downloads-->
+          <hr>
+          
         </div>
       </div>
     </div>

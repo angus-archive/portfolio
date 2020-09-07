@@ -8,8 +8,14 @@ include_once include_private_file("/core/public-functions/setup/connect-to-publi
 //Import Email Functions
 include_once include_private_file("/core/email-functions.php");
 
+//Check for spambots
+$is_bot=0;
+if(isset($_POST['website']) && ($_POST['website'] != '')){
+    $is_bot=1;
+}
+
 //Check for POST parameters
-if (isset($_POST["name"],$_POST["email"],$_POST["message"])){
+if (isset($_POST["name"],$_POST["email"],$_POST["message"]) && !$is_bot){
   $name=$_POST["name"];
   $email=$_POST["email"];
   $message=$_POST["message"];
@@ -51,7 +57,20 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"])){
         <button class="delete"></button>
         Your Email has been sent succesfully
       </div>
+      <? elseif(isset($email_sent)):?>
+      <div class="notification is-warning">
+        <button class="delete"></button>
+        An error occurred sending your email 
+      </div>  
       <? endif; ?>
+
+      <? if($is_bot == 1): ?>
+      <div class="notification is-danger">
+        <button class="delete"></button>
+        Your email was not sent (Anti Spam)
+      </div>
+      <? endif; ?>
+
       <div class="columns">
         <div class="column is-5">
           <div class="box">
@@ -61,11 +80,11 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"])){
             </div>
             <hr>
             <!--Github-->
-            <a class="panel-block"><span class="panel-icon"><i class="fab fa-github"></i></span>Github</a>
+            <a href="https://github.com/angusgoody" target="_blank" class="panel-block"><span class="panel-icon"><i class="fab fa-github"></i></span>Github</a>
             <!--Linkedin-->
-            <a class="panel-block"><span class="panel-icon"><i class="fab fa-linkedin-in"></i></span>Linkedin</a>
+            <a href="https://www.linkedin.com/in/angus-goody" target="_blank" class="panel-block"><span class="panel-icon"><i class="fab fa-linkedin-in"></i></span>Linkedin</a>
             <!--Email-->
-            <a class="panel-block"><span class="panel-icon"><i class="fas fa-envelope"></i></span>example@gmail.com</a>
+            <a target="_blank" href="#" class="panel-block"><span class="panel-icon"><i class="fas fa-envelope"></i></span>example@gmail.com</a>
 
           </div>
         </div>
@@ -105,6 +124,11 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"])){
                   <textarea required name="message" class="textarea" placeholder="Your Message..."></textarea>
                 </div>
               </div>
+              <!--Lastname (HP)-->
+              <div class='req'>
+                  <label for='website'>Leave blank</label>
+                  <input type='text' name='website'>
+              </div>
 
               <!--Submit-->
               <div class="control is-expanded">
@@ -119,5 +143,11 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"])){
   </div>
   <!-- Footer -->
   <? include_once include_local_file("/includes/footer.php");?>
+  <!--Scripts-->
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $(".req").hide();
+    });
+  </script>
 </body>
 </html>
