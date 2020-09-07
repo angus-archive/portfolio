@@ -32,8 +32,10 @@ include_once include_private_file("/core/public-functions/public-functions.php")
         <a style="width: 25%; min-width: 170px;" href="/projects" class="button is-primary is-large mt-5">Projects</a>
       </div>
       <br>
+      <br> 
       <div class="section box mt-5">
         <div class="container is-narrow">
+          
           <!--Skills columns-->
           <div class="columns is-gapless is-mobile is-multiline">
             <!--Back End-->
