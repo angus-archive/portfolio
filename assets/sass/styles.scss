@@ -10,8 +10,6 @@ $info: #768DF7;
 $warning: #EFA821;
 $danger: #F76486;
 $success: #18BF3F;
-$light: #E5EFF4;
-
 
 //New colours
 $secondary: #00C896;
@@ -20,8 +18,17 @@ $secondary-invert: #FFFFFF;
 $backdrop: #EFF4F6;
 $backdrop-invert: findColorInvert($backdrop);
 
+$backdrop-second: #D7E4F4;
+$backdrop-second-invert: findColorInvert($backdrop-second);
+
 $dracula: #1E2C2A;
 $dracula-invert: findColorInvert($dracula);
+
+$git: #474749;
+$git-invert: findColorInvert($git);
+
+$linkedin: #0073B6;
+$linkedin-invert: findColorInvert($linkedin);
 
 //Colour scheme 1
 $pal-3-1: #A6EBC9;
@@ -40,6 +47,9 @@ $addColors: (
   "secondary":($secondary, $secondary-invert),
   "backdrop": ($backdrop, $backdrop-invert),
   "dracula": ($dracula, $dracula-invert),
+  "linkedin": ($linkedin,$linkedin-invert),
+  "git": ($git,$git-invert),
+  "backdrop-second": ($backdrop-second,$backdrop-second-invert),
   "pal-3-1": ($pal-3-1, $pal-3-1-invert),
   "pal-3-2": ($pal-3-2, $pal-3-2-invert),
   "pal-3-3": ($pal-3-3, $pal-3-3-invert),

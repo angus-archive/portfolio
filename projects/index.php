@@ -65,7 +65,7 @@ $all_projects=get_all_projects($pdo);
       <div class="columns is-multiline is-mobile">
         <!--No results-->
         <div class="column is-12" id="not_found" style="display: none">
-          <article class="notification is-link is-light">
+          <article class="notification is-backdrop-second">
             <p class="title">No Projects Found</p>
             <p class="subtitle">No projects could be found for this category</p>
           </article>

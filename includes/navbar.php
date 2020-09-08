@@ -16,7 +16,7 @@ function isCurrent($pageName){
 	global $NAV_PAGE;
 	//If the global matches the argument set as current
 	if ($NAV_PAGE == $pageName){
-		echo "has-text-primary-dark";
+		echo "active";
 	}
 }
 
@@ -65,11 +65,11 @@ function isCurrentSR($pageName){
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary" target="_blank" href="https://github.com/angusgoody/portfolio">
+          <a class="button is-git" target="_blank" href="https://github.com/angusgoody/portfolio">
             <span class="icon"><i class="fab fa-github"></i></span>
             <span>GitHub</span>
           </a>
-          <a class="button is-info" target="_blank" href="https://www.linkedin.com/in/angus-goody">
+          <a class="button is-linkedin" target="_blank" href="https://www.linkedin.com/in/angus-goody">
             <span class="icon"><i class="fab fa-linkedin"></i></span>
             <span>Linkedin</span>
           </a>
