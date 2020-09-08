@@ -69,8 +69,8 @@ if(isset($_GET["id"])){
           <div class="column is-6-tablet is-5-desktop is-4-widescreen">
             <!--Image -->
             <div class="has-background-grey-lighter">
-              <figure class="image">
-                <img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Product Image For <?=$project["name"]?>">
+              <figure class="image is-5by4">
+                <img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Product Image For <?=$project["name"]?>" class="img-cover">
               </figure>
             </div>
           </div>

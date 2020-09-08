@@ -75,8 +75,8 @@ $all_projects=get_all_projects($pdo);
         <div class="project-col column is-12-mobile is-6-tablet is-3-fullhd is-4-desktop" cat=<?=get_project_category($pdo,$project["PID"])["CID"]?>>
           <div class="box equal-height">
             <div class="card-image">
-              <figure class="image is-5by4">
-                <a href="/projects/view?id=<?=$project["PID"]?>"><img src="/assets/images/project-images/<?=$project["image_slug"]?>" alt="Project Image For <?=$project["name"]?>"></a>
+              <figure class="image is-5by4 has-background-light">
+                <a href="/projects/view?id=<?=$project["PID"]?>"><img src="/assets/images/project-images/<?=$project["image_slug"]?>" class="img-cover" alt="Project Image For <?=$project["name"]?>"></a>
               </figure>
             </div>
             <!--Content-->
