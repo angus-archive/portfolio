@@ -84,7 +84,7 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"]) && !$is_bot){
             <!--Linkedin-->
             <a href="https://www.linkedin.com/in/angus-goody" target="_blank" class="panel-block"><span class="panel-icon"><i class="fab fa-linkedin-in"></i></span>Linkedin</a>
             <!--Email-->
-            <a target="_blank" href="#" class="panel-block"><span class="panel-icon"><i class="fas fa-envelope"></i></span>example@gmail.com</a>
+            <a target="_blank" href = "mailto: angus@angusgoody.com" class="panel-block"><span class="panel-icon"><i class="fas fa-envelope"></i></span>Email</a>
 
           </div>
         </div>

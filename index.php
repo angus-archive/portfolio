@@ -39,81 +39,36 @@ include_once include_private_file("/core/public-functions/public-functions.php")
       <br> 
       <div class="section box mt-5">
         <div class="container is-narrow">
-          
           <!--Skills columns-->
           <div class="columns is-gapless is-mobile is-multiline">
-            <!--Back End-->
+            <?
+            $allContent=array(array("Back End","/assets/images/icons/code.svg",array("PHP","Python","Java","Ruby","MySQL")),array("Front End","/assets/images/icons/monitor.svg",array("HTML","CSS","Javascript","jQuery","Bootstrap","Bulma")),array("Designer","/assets/images/icons/design.svg",array("Affinity","Sketch")))
+            ?>
+            <? foreach ($allContent as $row): ?>
             <div class="column mt-2">
               <figure class="image is-128x128 mx-auto">
-                <img src="/assets/images/icons/code.svg" alt="Coding Icon">
+                <img src="<?=$row[1]?>" alt="<?=$row[0]?> Icon">
               </figure>
               <!--Title-->
               <div class="has-text-centered mt-5">
-                <h3 class="title is-4 has-text-grey-dark">Back End</h3>
+                <h3 class="title is-4 has-text-grey-dark"><?=$row[0]?></h3>
               </div>
               <hr>
               <!--Skills-->
               <div class="skills py-4">
-                <div class="columns is-centered is-multiline">
+                <table class="table is-fullwidth has-text-centered">
                   <?
                   //Get tags
-                  $all_tags=array("PHP","Python","Java","Ruby","MySQL");
+                  $all_tags=$row[2];
                   foreach ($all_tags as $tag): ?>
-                  <div class="column is-7">
-                    <p class="notification is-pal-3-1 has-text-centered mx-1"><?=$tag?></p>
-                  </div>
+                  <tr style="line-height: 3rem;">
+                    <td><?=$tag?></td>
+                  </tr>
                   <? endforeach; ?>
-                </div>
+                </table>
               </div>
             </div>
-            <!--Front End-->
-            <div class="column mt-2">
-              <figure class="image is-128x128 mx-auto">
-                <img src="/assets/images/icons/monitor.svg" alt="Monitor Icon">
-              </figure>
-              <!--Title-->
-              <div class="has-text-centered mt-5">
-                <h3 class="title is-4 has-text-grey-dark">Front End</h3>
-              </div>
-              <hr>
-              <!--Skills-->
-              <div class="skills py-4">
-                <div class="columns is-centered is-multiline">
-                  <?
-                  //Get tags
-                  $all_tags=array("HTML","CSS","Javascript","jQuery","Bootstrap","Bulma");
-                  foreach ($all_tags as $tag): ?>
-                  <div class="column is-7">
-                    <p class="notification is-pal-3-2  has-text-centered mx-1"><?=$tag?></p>
-                  </div>
-                  <? endforeach; ?>
-                </div>
-              </div>
-            </div>
-            <!--Designer-->
-            <div class="column mt-2">
-              <figure class="image is-128x128 mx-auto">
-                <img src="/assets/images/icons/design.svg" alt="Design Icon">
-              </figure>
-              <!--Title-->
-              <div class="has-text-centered mt-5">
-                <h3 class="title is-4 has-text-grey-dark">Designer</h3>
-              </div>
-              <hr>
-              <!--Skills-->
-              <div class="skills py-4">
-                <div class="columns is-centered is-multiline">
-                  <?
-                  //Get tags
-                  $all_tags=array("Affinity","Sketch");
-                  foreach ($all_tags as $tag): ?>
-                  <div class="column is-7">
-                    <p class="notification is-pal-3-3  has-text-centered mx-1"><?=$tag?></p>
-                  </div>
-                  <? endforeach; ?>
-                </div>
-              </div>
-            </div>
+            <? endforeach; ?>
           </div>
           <!--How made-->
           <hr>
@@ -127,7 +82,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
               //Get tags
               $all_tags=get_tags_by_name_list($pdo,array("Bulma","PHP","CSS","HTML","jQuery","MySQL"));
               foreach ($all_tags as $tag): ?>
-              <div class="column">
+              <div class="column is-4-tablet">
                 <p style="background-color: <?=$tag["background"]?>;color: <?=$tag["foreground"]?>" class="notification has-text-centered"><strong><?=$tag["name"]?></strong></p>
               </div>
               <? endforeach;?>
@@ -144,7 +99,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <div class="columns is-mobile is-centered mt-4">
               <div class="column is-8-mobile is-6-tablet is-3-desktop">
                 <img src="/assets/images/meat/resume.svg" alt="Angus Goody Resume">
-                <a href="/helpers/download-resume" class="button is-link is-outlined mt-3">Download Resume</a>
+                <a href="/helpers/download-resume" class="button is-secondary is-outlined mt-3">Download Resume</a>
               </div>
             </div>
           </div>

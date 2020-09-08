@@ -31,7 +31,7 @@ $all_projects=get_all_projects($pdo);
       </div> 
       <!--Filter Box-->
       <div class="box">
-        <div id="filter_tabs" class="tabs is-centered">
+        <div id="filter_tabs" class="tabs is-centered is-boxed">
           <ul>
             <li class="is-active">
               <a cat="all" class="active">

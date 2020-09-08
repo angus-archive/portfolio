@@ -12,7 +12,7 @@
 <footer class="footer has-background-dracula">
 	<div class="container">
 	  <div class="content has-text-centered">
-	    <p class="has-text-light">&copy 2020 Angus Goody</p>
+	    <p><strong  class="has-text-light"> &copy 2020 Angus Goody</strong></p>
 	  </div>
 	</div>
 </footer>

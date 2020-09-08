@@ -25,7 +25,51 @@ include_once include_local_file("/includes/a_config.php");
       </div>
       <!--Box-->
       <div class="box">
-        ye
+        <div class="columns is-centeted is-vcentered is-multiline">
+          <div class="column is-8 has-text-centered mt-3">
+            <div class="mx-auto mw500">
+              <h2 class="title is-4">Design</h2>
+              <div class="justify-text content">
+                <p>I designed all the resources and images for this website using the <a>Affinity</a> suite, including...</p>
+                <div class="columns is-mobile is-multiline">
+                  <?$myList=array("Logo","Favicon","Titles","Project Logos","Downloads")?>
+                  <? foreach ($myList as $item):?>
+                  <div class="column equal-height">
+                    <div class="notification is-light is-info has-text-centered">
+                      <strong><?=$item?></strong>
+                    </div>
+                  </div>
+                  <? endforeach;?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4">
+            <figure class="image">
+              <img src="/assets/images/meat/ipad.jpg">
+            </figure>
+          </div>
+          <div class="column is-12">
+            <hr>
+          </div>
+          <div class="column is-4">
+            <figure class="image">
+              <img src="/assets/images/meat/macbook.png">
+            </figure>
+          </div>
+          <div class="column is-8 has-text-centered">
+            <div class="mx-auto mw500">
+              <h2 class="title is-4">Coding</h2>
+              <div class="justify-text content">
+                <p>This website was built using <a>Spacedeck</a> which is a PHP boilerplate I built for making dynamic websites quickly and efficiently</p>
+                <p>I used <a>Bumla</a> for the CSS Framework as It is very lightweight and customisable, Bulma does not have any Javascript dependancies which makes this site extremely fast</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
       </div>      
     </div>
   </div>

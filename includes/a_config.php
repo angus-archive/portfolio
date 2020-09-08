@@ -50,12 +50,20 @@ switch ($first_parent) {
 		$PAGE_DESCRIPTION="Welcome to my Portfolio";
 		break;
 
-	//About Page
+	//Contact Page
 	case '/contact.php':
 		$NAV_PAGE="contact";
 		$CURRENT_PAGE="contact";
 		$PAGE_TITLE="Contact | Angus Goody";
-		$PAGE_DESCRIPTION="Contact Angus Goody";
+		$PAGE_DESCRIPTION="Contact Me - Angus Goody";
+		break;
+
+	//About Page
+	case '/about.php':
+		$NAV_PAGE="about";
+		$CURRENT_PAGE="about";
+		$PAGE_TITLE="About | Angus Goody";
+		$PAGE_DESCRIPTION="How I created this website - Angus Goody";
 		break;
 
 	//Projects Section
@@ -66,7 +74,7 @@ switch ($first_parent) {
 		$PAGE_DESCRIPTION="View my Projects at Angus Goody";
 		//A seperate switch for the subpages of this folder
 		switch ($file_base) {
-			case 'product.php':
+			case 'view.php':
 				$CURRENT_PAGE="projects/view";
 		}
 		break;

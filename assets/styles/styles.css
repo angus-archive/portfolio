@@ -11688,8 +11688,17 @@ body {
 }
 
 .title_logo {
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
+}
+
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.mw500 {
+  max-width: 500px;
 }
 
 /*
