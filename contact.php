@@ -49,7 +49,7 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"]) && !$is_bot){
       <div class="has-text-centered mb-5">
         <!--Contact Sign-->
         <figure class="image mb-2">
-          <img src="/assets/images/core/contact.svg"  style="max-width: 700px; margin: auto;" alt="Contact Title Handwritten">
+          <img src="/assets/images/core/contact.svg" class="title_logo" alt="Contact Title Handwritten">
         </figure>
       </div>
       <?if (isset($email_sent) && ($email_sent === true)): ?>

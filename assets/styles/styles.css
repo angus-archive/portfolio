@@ -9895,4 +9895,9 @@ body {
   background-color: #233332;
 }
 
+.title_logo {
+  max-width: 700px;
+  margin: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */

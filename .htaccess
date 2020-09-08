@@ -8,6 +8,10 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
 
+##Ensure trailing slashes are removed
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R]
+
 ## hide .php extension
 # To externally redirect /dir/foo.php to /dir/foo
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]

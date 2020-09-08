@@ -26,7 +26,7 @@ $all_projects=get_all_projects($pdo);
       <div class="has-text-centered mb-5">
         <!--Projects Sign-->
         <figure class="image mb-2">
-          <img src="/assets/images/core/projects.svg"  style="max-width: 700px; margin: auto;" alt="Projects Title Handwritten">
+          <img src="/assets/images/core/projects.svg" class="title_logo" alt="Projects Title Handwritten">
         </figure>
       </div> 
       <!--Filter Box-->

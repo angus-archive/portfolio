@@ -25,7 +25,7 @@ function isCurrentSR($pageName){
 	global $NAV_PAGE;
 	//If the global matches the argument set as current
 	if ($NAV_PAGE == $pageName){
-		echo "<span class=\"sr-only\">(current)</span>";
+    echo "aria-current='page'";
 	}
 }
 
@@ -48,16 +48,16 @@ function isCurrentSR($pageName){
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <!--Home-->
-      <a class="navbar-item" href="/">
-        Home <?isCurrentSR("index")?>
+      <a class="navbar-item" href="/"  <?isCurrentSR("index")?>>
+        Home
       </a>
       <!--Projects-->
-      <a class="navbar-item" href="/projects">
-        Projects <?isCurrentSR("projects")?>
+      <a class="navbar-item" href="/projects" <?isCurrentSR("projects")?>>
+        Projects
       </a>
       <!--Contact page-->
-      <a class="navbar-item" href="/contact">
-        Contact <?isCurrentSR("contact")?>
+      <a class="navbar-item" href="/contact"  <?isCurrentSR("contact")?>>
+        Contact
       </a>
 
     </div>

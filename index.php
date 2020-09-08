@@ -23,7 +23,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
       <div class="has-text-centered mb-5">
         <!--Written Logo-->
         <figure class="image mb-2">
-          <img src="/assets/images/core/sign.svg"  style="max-width: 700px; margin: auto;" alt="Angus' Signiture">
+          <img src="/assets/images/core/sign.svg" class="title_logo" alt="Angus' Signiture">
         </figure>
         <div class="has-text-light my-5">
           <h1 class="title is-1 has-text-grey-lighter">Computer Science Student</h1>
@@ -32,6 +32,10 @@ include_once include_private_file("/core/public-functions/public-functions.php")
         <a style="width: 25%; min-width: 170px;" href="/projects" class="button is-primary is-large mt-5">Projects</a>
       </div>
       <br>
+      <!--Skills Logo-->
+      <figure class="image mb-2">
+        <img src="/assets/images/core/skills.svg"  style="max-width: 250px; margin: auto;" alt="My Skills">
+      </figure>
       <br> 
       <div class="section box mt-5">
         <div class="container is-narrow">
@@ -131,7 +135,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
           </div>
           <!--Find out more -->
           <div class="has-text-centered">
-            <a class="button is-link is-inverted">Find out more about this website</a>
+            <a href="/about" class="button is-link is-inverted">Find out more about this website</a>
           </div>
           <!--Downloads-->
           <hr>
