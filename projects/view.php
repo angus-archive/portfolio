@@ -104,18 +104,20 @@ if(isset($_GET["id"])){
 
               </div>
               <div style="flex-grow: 0">
-                <div class="columns is-gapless">
+                <div class="columns is-gapless mt-5">
                   <div class="column is-6">
-                    <? if($project["is_live"] == 1):?>
-                    <div class="level-item">
-                      <a class="button is-fullwidth is-primary is-outlined" target="_blank" href="<?=$project["live_link"]?>">Visit</a>
+                    <div class="columns is-mobile">
+                      <? if($project["is_live"] == 1):?>
+                      <div class="column">
+                        <a class="button is-fullwidth is-primary is-outlined" target="_blank" href="<?=$project["live_link"]?>">Visit</a>
+                      </div>
+                      <? endif; ?>
+                      <? if($project["is_git"] == 1):?>
+                      <div class="column">
+                        <a class="button is-fullwidth is-link is-outlined" target="_blank" href="<?=$project["git_link"]?>">Github</a>
+                      </div>
+                      <? endif; ?>
                     </div>
-                    <? endif; ?>
-                    <? if($project["is_git"] == 1):?>
-                    <div class="level-item">
-                      <a class="button is-fullwidth is-link is-outlined" target="_blank" href="<?=$project["git_link"]?>">Github</a>
-                    </div>
-                    <? endif; ?>
                   </div>
                 </div>
               </div>
