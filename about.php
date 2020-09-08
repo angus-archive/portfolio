@@ -25,7 +25,7 @@ include_once include_local_file("/includes/a_config.php");
       </div>
       <!--Box-->
       <div class="box">
-        <div class="columns is-centeted is-vcentered is-multiline">
+        <div class="columns is-centered  is-vcentered is-multiline">
           <div class="column is-8 has-text-centered mt-3">
             <div class="mx-auto mw500">
               <h2 class="title is-4">Design</h2>
@@ -59,13 +59,37 @@ include_once include_local_file("/includes/a_config.php");
           </div>
           <div class="column is-8 has-text-centered">
             <div class="mx-auto mw500">
-              <h2 class="title is-4">Coding</h2>
+              <h2 class="title is-4">Front End</h2>
               <div class="justify-text content">
-                <p>This website was built using <a>Spacedeck</a> which is a PHP boilerplate I built for making dynamic websites quickly and efficiently</p>
+                <p>This website was built using <a>Spacedeck</a> which is a PHP boilerplate I built for making dynamic websites quickly and efficiently.</p>
                 <p>I used <a>Bumla</a> for the CSS Framework as It is very lightweight and customisable, Bulma does not have any Javascript dependancies which makes this site extremely fast</p>
               </div>
             </div>
           </div>
+
+          <div class="column is-12">
+            <hr>
+          </div>
+          <div class="column is-8 has-text-centered">
+            <div class="mx-auto mw500">
+              <h2 class="title is-4">Back End</h2>
+              <div class="justify-text content">
+                <p>This website is built dynamically using both PHP and MySQL, each project is stored in a database and then the code is generated when the user requests the page. I have made the source code for this website open source so you can check it out on <a>Github.</a> </p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4">
+            <figure class="image">
+              <img src="/assets/images/meat/dynamic.svg">
+            </figure>
+          </div>
+          <div class="column is-12">
+            <hr>
+            <div class="mx-auto" style="max-width: 200px">
+              <img src="/assets/images/bulma.png">
+            </div>
+          </div>
+
 
         </div>
 
