@@ -16,7 +16,7 @@ $all_projects=get_all_projects($pdo);
   <!-- Head tags -->
   <? include_once include_local_file("/includes/head-tags.php");?>
 </head>
-<body class="dracula">
+<body class="has-background-backdrop">
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
   <!-- Content -->

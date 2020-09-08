@@ -18,7 +18,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
   <!-- Content -->
-  <div id="wrapper" class="dracula">
+  <div id="wrapper" class="has-background-backdrop">
     <div class="container section">
       <div class="has-text-centered mb-5">
         <!--Written Logo-->
@@ -26,10 +26,10 @@ include_once include_private_file("/core/public-functions/public-functions.php")
           <img src="/assets/images/core/sign.svg" class="title_logo" alt="Angus' Signiture">
         </figure>
         <div class="has-text-light my-5">
-          <h1 class="title is-1 has-text-grey-lighter">Computer Science Student</h1>
+          <h1 class="title is-1 has-text-grey">Computer Science Student</h1>
           <h3 class="subtitle has-text-grey-light">University of Sheffield</h3>
         </div>
-        <a style="width: 25%; min-width: 170px;" href="/projects" class="button is-primary is-large mt-5">Projects</a>
+        <a style="width: 25%; min-width: 170px;" href="/projects" class="button is-secondary is-large mt-5">Projects</a>
       </div>
       <br>
       <!--Skills Logo-->
@@ -60,7 +60,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
                   $all_tags=array("PHP","Python","Java","Ruby","MySQL");
                   foreach ($all_tags as $tag): ?>
                   <div class="column is-7">
-                    <p class="notification is-primary has-text-centered mx-1"><?=$tag?></p>
+                    <p class="notification is-pal-3-1 has-text-centered mx-1"><?=$tag?></p>
                   </div>
                   <? endforeach; ?>
                 </div>
@@ -84,7 +84,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
                   $all_tags=array("HTML","CSS","Javascript","jQuery","Bootstrap","Bulma");
                   foreach ($all_tags as $tag): ?>
                   <div class="column is-7">
-                    <p class="notification is-info has-text-centered mx-1"><?=$tag?></p>
+                    <p class="notification is-pal-3-2  has-text-centered mx-1"><?=$tag?></p>
                   </div>
                   <? endforeach; ?>
                 </div>
@@ -108,7 +108,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
                   $all_tags=array("Affinity","Sketch");
                   foreach ($all_tags as $tag): ?>
                   <div class="column is-7">
-                    <p class="notification is-link has-text-centered mx-1"><?=$tag?></p>
+                    <p class="notification is-pal-3-3  has-text-centered mx-1"><?=$tag?></p>
                   </div>
                   <? endforeach; ?>
                 </div>

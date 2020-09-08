@@ -1,14 +1,52 @@
+
+// 1. Import the initial variables
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
 // Set your brand colors
-$primary: #71B800;
+$primary: #50C575;
 $link: #409BF7;
 $info: #768DF7;
 $warning: #EFA821;
 $danger: #F76486;
 $success: #18BF3F;
+$light: #E5EFF4;
 
-//Custom colours
+
+//New colours
+$secondary: #00C896;
+$secondary-invert: #FFFFFF;
+
+$backdrop: #EFF4F6;
+$backdrop-invert: findColorInvert($backdrop);
+
 $dracula: #1E2C2A;
-$dracula_light: #233332;
+$dracula-invert: findColorInvert($dracula);
+
+//Colour scheme 1
+$pal-3-1: #A6EBC9;
+$pal-3-1-invert: findColorInvert($pal-3-1);
+
+$pal-3-2: #8380B6;
+$pal-3-2-invert: findColorInvert($pal-3-2);
+
+$pal-3-3: #FFE4FA;
+$pal-3-3-invert: findColorInvert($pal-3-3);
+
+
+// 5. Add new color variables to the color map.
+@import "../../node_modules/bulma/sass/utilities/derived-variables";
+$addColors: (
+  "secondary":($secondary, $secondary-invert),
+  "backdrop": ($backdrop, $backdrop-invert),
+  "dracula": ($dracula, $dracula-invert),
+  "pal-3-1": ($pal-3-1, $pal-3-1-invert),
+  "pal-3-2": ($pal-3-2, $pal-3-2-invert),
+  "pal-3-3": ($pal-3-3, $pal-3-3-invert),
+
+);
+$colors: map-merge($colors, $addColors);
+
 
 /*
 ####################################################
@@ -64,15 +102,16 @@ body {
   flex: auto;
 }
 
-.dracula{
-  background-color: $dracula;
-}
-
-.dracula_light{
-  background-color: $dracula_light;
-}
-
 .title_logo{
   max-width: 700px; 
   margin: auto;
 }
+
+/*
+####################################################
+C O L O U R S
+####################################################
+*/
+
+
+

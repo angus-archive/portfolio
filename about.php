@@ -10,7 +10,7 @@ include_once include_local_file("/includes/a_config.php");
   <!-- Head tags -->
   <? include_once include_local_file("/includes/head-tags.php");?>
 </head>
-<body class="dracula">
+<body class="has-background-backdrop">
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
   <!-- Content -->

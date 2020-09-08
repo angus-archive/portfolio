@@ -34,7 +34,7 @@ if(isset($_GET["id"])){
   <meta name="description" content="This project could not be found - Angus Goody">
   <? endif; ?>
 </head>
-<body class="dracula">
+<body class="has-background-backdrop">
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
   <? if(!$validProject == 1): ?>
@@ -62,7 +62,7 @@ if(isset($_GET["id"])){
       <!--White box-->  
       <div class="box">
         <!--Back button-->
-        <a href="/projects" class="button is-primary is-inverted mb-4"><span class="icon"><i class="fas fa-chevron-left"></i></span><span>Projects</span></a>
+        <a href="/projects" class="button is-info is-inverted mb-4"><span class="icon"><i class="fas fa-chevron-left"></i></span><span>Projects</span></a>
         <!--Basic details-->
         <div class="columns">
           <!--Left Side -->

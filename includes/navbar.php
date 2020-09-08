@@ -16,7 +16,7 @@ function isCurrent($pageName){
 	global $NAV_PAGE;
 	//If the global matches the argument set as current
 	if ($NAV_PAGE == $pageName){
-		echo "activeNavLink";
+		echo "has-text-primary-dark";
 	}
 }
 
@@ -48,15 +48,15 @@ function isCurrentSR($pageName){
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <!--Home-->
-      <a class="navbar-item" href="/"  <?isCurrentSR("index")?>>
+      <a class="navbar-item <?=isCurrent("index")?>" href="/"  <?isCurrentSR("index")?>>
         Home
       </a>
       <!--Projects-->
-      <a class="navbar-item" href="/projects" <?isCurrentSR("projects")?>>
+      <a class="navbar-item <?=isCurrent("projects")?>" href="/projects" <?isCurrentSR("projects")?>>
         Projects
       </a>
       <!--Contact page-->
-      <a class="navbar-item" href="/contact"  <?isCurrentSR("contact")?>>
+      <a class="navbar-item <?=isCurrent("contact")?>" href="/contact"  <?isCurrentSR("contact")?>>
         Contact
       </a>
 

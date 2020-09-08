@@ -39,7 +39,7 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"]) && !$is_bot){
   <!-- Head tags -->
   <? include_once include_local_file("/includes/head-tags.php");?>
 </head>
-<body class="dracula">
+<body class="has-background-backdrop">
   <!-- Navbar -->
   <? include_once include_local_file("/includes/navbar.php");?>
   <!-- Content -->
