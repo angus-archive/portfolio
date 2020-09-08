@@ -53,7 +53,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
                 <div class="columns is-centered is-multiline">
                   <?
                   //Get tags
-                  $all_tags=array("PHP","Python","Java","Ruby");
+                  $all_tags=array("PHP","Python","Java","Ruby","MySQL");
                   foreach ($all_tags as $tag): ?>
                   <div class="column is-7">
                     <p class="notification is-primary has-text-centered mx-1"><?=$tag?></p>
@@ -121,7 +121,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <div class="columns is-vcentered is-mobile is-multiline is-centered">
               <?
               //Get tags
-              $all_tags=get_tags_by_name_list($pdo,array("Bulma","PHP","CSS","HTML","jQuery"));
+              $all_tags=get_tags_by_name_list($pdo,array("Bulma","PHP","CSS","HTML","jQuery","MySQL"));
               foreach ($all_tags as $tag): ?>
               <div class="column">
                 <p style="background-color: <?=$tag["background"]?>;color: <?=$tag["foreground"]?>" class="notification has-text-centered"><strong><?=$tag["name"]?></strong></p>
@@ -140,7 +140,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <div class="columns is-mobile is-centered mt-4">
               <div class="column is-8-mobile is-6-tablet is-3-desktop">
                 <img src="/assets/images/meat/resume.svg" alt="Angus Goody Resume">
-                <a class="button is-link is-outlined mt-3">Download Resume</a>
+                <a href="/helpers/download-resume" class="button is-link is-outlined mt-3">Download Resume</a>
               </div>
             </div>
           </div>
