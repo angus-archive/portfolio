@@ -22,15 +22,14 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"]) && !$is_bot){
   //Parse the user data
   $html_data=generate_message_email($name,$email,$message);
   //Send
-  $to   = 'Insert_reciever_email'; //TODO get mailbox details
-  $from = 'Insert_sender_email';   //TODO get mailbox details
+  $to   = 'angus@angusgoody.com'; //TODO get mailbox details
+  $from = 'noreply@angusgoody.com';   //TODO get mailbox details
   $name = 'Angus Goody Website';
   $subj = 'New Message';
   $msg = $html_data;
 
   //Send email and get confirmation
   $email_sent=smtpmailer($to,$from, $name ,$subj, $msg);
-
 }
 ?>
 <!DOCTYPE html>
@@ -52,7 +51,7 @@ if (isset($_POST["name"],$_POST["email"],$_POST["message"]) && !$is_bot){
           <img src="/assets/images/core/contact.svg" class="title_logo" alt="Contact Title Handwritten">
         </figure>
       </div>
-      <?if (isset($email_sent) && ($email_sent === true)): ?>
+      <?if (isset($email_sent) && ($email_sent === "true")): ?>
       <div class="notification is-success">
         <button class="delete"></button>
         Your Email has been sent succesfully
