@@ -126,7 +126,7 @@ if(isset($_GET["id"])){
         </div>
         <!--More details-->
         <hr>
-        <div class="columns is-mobile">
+        <div class="columns">
           <div class="column">
             <div class="column is-8">
               <h2 class="title is-4">Details</h2>
