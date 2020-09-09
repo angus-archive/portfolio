@@ -126,14 +126,16 @@ if(isset($_GET["id"])){
         </div>
         <!--More details-->
         <hr>
-        <div class="level is-mobile">
-          <div class="level-left">
-            <div>
+        <div class="columns is-mobile">
+          <div class="column">
+            <div class="column is-8">
               <h2 class="title is-4">Details</h2>
-              <p><?=$project["desc_l"]?></p>
+              <div class="justify-text">
+                <p><?=$project["desc_l"]?></p>
+              </div>
             </div>
           </div>
-          <div class="level-right">
+          <div class="level-right px-4">
             <figure class="image is-48x48">
               <img src="/assets/images/project-images/<?=$project["logo_slug"]?>" alt="Project Logo for <?=$project["name"]?>">
             </figure>
