@@ -30,7 +30,7 @@ include_once include_local_file("/includes/a_config.php");
             <div class="mx-auto mw500">
               <h2 class="title is-4">Design</h2>
               <div class="justify-text content">
-                <p>I designed all the resources and images for this website using the <a>Affinity</a> suite, including...</p>
+                <p>I designed all the resources and images for this website using the <a href="https://affinity.serif.com/en-gb/" target="_blank">Affinity</a> suite, including...</p>
                 <div class="columns is-mobile is-multiline">
                   <?$myList=array("Logo","Favicon","Titles","Project Logos","Downloads")?>
                   <? foreach ($myList as $item):?>
@@ -61,8 +61,8 @@ include_once include_local_file("/includes/a_config.php");
             <div class="mx-auto mw500">
               <h2 class="title is-4">Front End</h2>
               <div class="justify-text content">
-                <p>This website was built using <a>Spacedeck</a> which is a PHP boilerplate I built for making dynamic websites quickly and efficiently.</p>
-                <p>I used <a>Bumla</a> for the CSS Framework as It is very lightweight and customisable, Bulma does not have any Javascript dependancies which makes this site extremely fast</p>
+                <p>This website was built using <a href="https://github.com/angusgoody/spacedeck" target="_blank">Spacedeck</a> which is a PHP boilerplate I built for making dynamic websites quickly and efficiently.</p>
+                <p>I used <a href="https://bulma.io/" target="_blank">Bumla</a> for the CSS Framework as It is very lightweight and customisable, Bulma does not have any Javascript dependancies which makes this site extremely fast</p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ include_once include_local_file("/includes/a_config.php");
             <div class="mx-auto mw500">
               <h2 class="title is-4">Back End</h2>
               <div class="justify-text content">
-                <p>This website is built dynamically using both PHP and MySQL, each project is stored in a database and then the code is generated when the user requests the page. I have made the source code for this website open source so you can check it out on <a>Github.</a> </p>
+                <p>This website is built dynamically using both PHP and MySQL, each project is stored in a database and then the code is generated when the user requests the page. I have made the source code for this website open source so you can check it out on <a href="https://github.com/angusgoody/portfolio" target="_blank">Github.</a> </p>
               </div>
             </div>
           </div>
