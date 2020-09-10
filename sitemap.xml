@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://angusgoody.com/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/contact</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/about</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/helpers/download-resume</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/projects/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/projects/view</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+</urlset>
