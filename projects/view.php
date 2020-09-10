@@ -29,6 +29,8 @@ if(isset($_GET["id"])){
   <? if($validProject == 1): ?>
   <title><?=$project['name']?> | Angus Goody</title>
   <meta name="description" content="View <?=$project['name']?> at Angus Goody's Website">
+  <!--Canonical-->
+  <link rel="canonical" href="<?php echo $PAGE_CANONICAL.'?id='.$project["PID"]; ?>"/>
   <? else: ?>
   <title> Project Unavailable | Angus Goody</title>
   <meta name="description" content="This project could not be found - Angus Goody">

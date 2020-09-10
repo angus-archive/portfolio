@@ -9,5 +9,7 @@
 <!--Meta information-->
 <meta name="description" content="<?php print $PAGE_DESCRIPTION;?>">
 <meta name="keywords" content="Angus,Goody,Portfolio,Angus Goody">
+<!--Canonical-->
+<link rel="canonical" href="<?php echo $PAGE_CANONICAL ?>"/>
 <?php include_once "static-tags.php" ?>
 

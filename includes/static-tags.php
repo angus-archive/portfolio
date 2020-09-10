@@ -7,8 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="geo.placename" content="Earth">
 <meta name="author" content="Angus Goody">
-<!--Canonical-->
-<link rel="canonical" href="<?php echo $PAGE_CANONICAL ?>"/>
 <!--Favicons-->
 <link rel="shortcut icon" type="image/png" href="/assets/images/core/favicon.png"/>
 <link rel="apple-touch-icon" href="/assets/images/core/apple-touch-icon.png">

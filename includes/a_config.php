@@ -32,12 +32,21 @@ $full_path = $_SERVER["PHP_SELF"];
 $first_parent = dirname($full_path);
 $file_base = basename($full_path);
 //If the current file is in root folder we don't need it's parent directory
+/*
 if ($first_parent == "/"){
 	$first_parent = $full_path;
 }
+*/
+//print_r(array($full_path,$first_parent,$file_base));
+//Calculate Canonical
+$can_header="https://";
+if ($file_base != "index.php"){
+    $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $full_path); //Remove PHP extension
+}else{
+  $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $first_parent);
+}
+$PAGE_CANONICAL=$can_header.$_SERVER['SERVER_NAME'].$withoutExt;
 
-//Create the Canonical Tag (Change protocols etc to suit your server)
-$PAGE_CANONICAL="https://".$_SERVER['SERVER_NAME'].preg_replace('/\\.[^.\\s]{3,4}$/', '', $full_path);
 
 //Switch statement for pages
 switch ($first_parent) {
