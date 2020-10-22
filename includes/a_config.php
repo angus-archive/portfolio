@@ -24,7 +24,7 @@
 $NAV_PAGE="index";
 $CURRENT_PAGE="index";
 $PAGE_TITLE="Angus Goody";
-$PAGE_DESCRIPTION="Welcome to my Portfolio";
+$PAGE_DESCRIPTION="View Angus Goody's Portfolio and find out about his projects";
 
 
 //Find the path of the current page
@@ -87,7 +87,7 @@ switch ($first_parent) {
 		$NAV_PAGE="undefined";
 		$CURRENT_PAGE="undefined";
 		$PAGE_TITLE="Angus Goody";
-		$PAGE_DESCRIPTION="Welcome to my Portfolio";
+		$PAGE_DESCRIPTION="View Angus Goody's Portfolio and find out about his projects";
 		break;
 }
 
