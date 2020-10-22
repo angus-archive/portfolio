@@ -31,13 +31,7 @@ $PAGE_DESCRIPTION="Welcome to my Portfolio";
 $full_path = $_SERVER["PHP_SELF"];
 $first_parent = dirname($full_path);
 $file_base = basename($full_path);
-//If the current file is in root folder we don't need it's parent directory
-/*
-if ($first_parent == "/"){
-	$first_parent = $full_path;
-}
-*/
-//print_r(array($full_path,$first_parent,$file_base));
+
 //Calculate Canonical
 $can_header="https://";
 if ($file_base != "index.php"){
@@ -56,7 +50,7 @@ switch ($first_parent) {
 		$NAV_PAGE="index";
 		$CURRENT_PAGE="index";
 		$PAGE_TITLE="Home | Angus Goody";
-		$PAGE_DESCRIPTION="Welcome to my Portfolio";
+		$PAGE_DESCRIPTION="View Angus Goody's Portfolio and find out about his projects";
 		break;
 
 	//Contact Page
