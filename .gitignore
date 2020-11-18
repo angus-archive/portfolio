@@ -2,3 +2,4 @@
 node_modules/
 ._*
 *.map
+.DS_Store

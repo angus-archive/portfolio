@@ -28,6 +28,13 @@ $all_projects=get_all_projects($pdo);
         <figure class="image mb-2">
           <img src="/assets/images/core/projects.svg" class="title_logo" alt="Projects Title Handwritten">
         </figure>
+        <div class="columns is-centered my-5">
+          <div class="column is-6">
+            <div class="justify-text">
+              <h2 class="subtitle is-6">Take a look at my programming projects, organise by web, desktop and mobile projects, to view more information about a project click on the image or name of the project.</h2>
+            </div>
+          </div>
+        </div>
       </div> 
       <!--Filter Box-->
       <div class="box">
