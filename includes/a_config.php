@@ -43,7 +43,7 @@ $PAGE_CANONICAL=$can_header.$_SERVER['SERVER_NAME'].$withoutExt;
 
 
 //Switch statement for pages
-switch ($first_parent) {
+switch ($full_path) {
 
 	//Home page
 	case '/index.php':
@@ -70,7 +70,7 @@ switch ($first_parent) {
 		break;
 
 	//Projects Section
-	case '/projects':
+	case '/projects/index.php':
 		$NAV_PAGE="projects";
 		$CURRENT_PAGE="products";
 		$PAGE_TITLE="Projects | Angus Goody";

@@ -12607,8 +12607,15 @@ body {
 
 /*
 ####################################################
-C O L O U R S
+N A V
 ####################################################
 */
+.navbar-start {
+  transition: 0.3s;
+}
+
+.navbar-start a:hover {
+  color: #00C896 !important;
+}
 
 /*# sourceMappingURL=styles.css.map */
