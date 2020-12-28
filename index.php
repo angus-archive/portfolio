@@ -29,7 +29,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
           <h1 class="title is-1 has-text-grey">Computer Science Student</h1>
           <h3 class="subtitle has-text-grey-light">University of Sheffield</h3>
         </div>
-        <a style="width: 25%; min-width: 170px;" href="/projects" class="button is-secondary is-large mt-5">Projects</a>
+        <a style="width: 25%; min-width: 170px;" href="/projects" class="button is-primary is-large mt-5">Projects</a>
       </div>
       <br>
       <!--Skills Logo-->
@@ -99,7 +99,7 @@ include_once include_private_file("/core/public-functions/public-functions.php")
             <div class="columns is-mobile is-centered mt-4">
               <div class="column is-8-mobile is-6-tablet is-3-desktop">
                 <img src="/assets/images/meat/resume.svg" alt="Angus Goody Resume">
-                <a href="/helpers/download-resume" class="button is-secondary is-outlined mt-3">Download Resume</a>
+                <a href="/helpers/download-resume" class="button is-primary is-outlined mt-3">Download Resume</a>
               </div>
             </div>
           </div>

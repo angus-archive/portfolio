@@ -56,8 +56,8 @@ if(isset($_GET["id"])){
     <div class="container section">
       <? if(!$validProject == 1): ?>
       <div class="has-text-centered">
-        <h3 class="title is-3 has-text-white">Project Not Found</h3>
-        <h2 class="subtitle is-6 has-text-white">The project you were looking for no longer exists</h2>
+        <h3 class="title is-3">Project Not Found</h3>
+        <h2 class="subtitle is-6">The project you were looking for no longer exists</h2>
         <a href="/projects" class="button is-rounded is-primary">All Projects</a>
       </div>
       <? else: ?>
