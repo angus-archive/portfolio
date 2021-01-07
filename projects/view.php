@@ -8,18 +8,16 @@ include_once include_private_file("/core/public-functions/setup/connect-to-publi
 //Import Public Functions
 include_once include_private_file("/core/public-functions/public-functions.php");
 
+$validProject=0
 if(isset($_GET["id"])){
   $pid=$_GET["id"];
-  $validProject=0;
   $project=get_project_by_id($pdo,$pid);
   if(isset($project["name"])){
     $validProject=1;
   }
 
-}else{
-  //header("location: /projects");
-  echo "nope";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="">
