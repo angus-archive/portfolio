@@ -8,7 +8,7 @@ include_once include_private_file("/core/public-functions/setup/connect-to-publi
 //Import Public Functions
 include_once include_private_file("/core/public-functions/public-functions.php");
 
-$validProject=0
+$validProject=0;
 if(isset($_GET["id"])){
   $pid=$_GET["id"];
   $project=get_project_by_id($pdo,$pid);
