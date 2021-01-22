@@ -2,26 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://angusgoody.com/</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://angusgoody.com/contact</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://angusgoody.com/about</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://angusgoody.com/helpers/download-resume</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://angusgoody.com/download-resume</loc>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://angusgoody.com/projects/</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://angusgoody.com/projects/view</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://angusgoody.com/projects/redwood</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/projects/pypassword</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/projects/portfolio</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/projects/pydiary</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/projects/rocket</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://angusgoody.com/projects/spacedeck</loc>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>
