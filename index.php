@@ -29,7 +29,7 @@ switch(array_shift($elements))// Pop off first item and switch
   //Case to view projects
   case 'projects':
       if (count($elements) > 0){
-        $pid=end($elements); //Update var to use
+        $slug=end($elements); //Update var to use
         include_once include_private_file("/views/public/view_project.php");
       }else{
         //Load projects homepage
