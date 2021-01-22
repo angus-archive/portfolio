@@ -38,6 +38,22 @@ switch(array_shift($elements))// Pop off first item and switch
       break;
 
 
+  //Sitemap
+  case 'sitemap.xml':
+    $filePath=include_private_file("/views/public/util/sitemap.xml");
+    $file = file_get_contents($filePath);
+    header('Content-type: text/xml');
+    echo $file;
+    break;
+
+  //Robots
+  case 'robots.txt':
+    $filePath=include_private_file("/views/public/util/robots.txt");
+    $file = file_get_contents($filePath);
+    header('Content-type: text');
+    echo $file;
+    break;
+        
   //Default - Go to error page
   default:
       include_once include_private_file($error_file_location);
